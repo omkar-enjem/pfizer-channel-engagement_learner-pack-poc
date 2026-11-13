@@ -1,0 +1,30 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.vercel/
+.pytest_cache/
+
+# Credentials and private key material
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+service-account*.json
+
+# Uploaded or private data; keep the public sample CSVs in data/
+/uploads/
+/data/private/
+/data/uploads/
+/data/raw/
+
+# Local databases, logs, and machine-specific files
+*.db
+*.sqlite
+*.sqlite3
+*.log
+.DS_Store
+Thumbs.db
