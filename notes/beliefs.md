@@ -1,0 +1,19 @@
+
+What each person believes, with its source and the question the data can answer. These are claims, not facts. DRAFT: verify each row against the cited page or timestamp, then fill "Verified".
+
+| # | Belief | Owner | Source | Question to test | Verified |
+|---|---|---|---|---|---|
+| B1 | Forecast is wrong: "short and long at the same time" | Rohan Mehta, CFO | `01` p5 | Are some C&F/SKU pairs at zero stock while others hold near-expiry stock of the same SKU? (SNAP) | ✓ 23 Nov |
+| B2 | On the QS SKUs, primary "doubles" in the last ten days of every quarter, then month one "falls off a cliff": "that is not demand". Allocation shares were set in the FY25 review; the FY26 review "never got done properly"; she thinks they were rolled forward but is unsure whether they changed | Kavita Rao, Head SC | `04` p1 | What share of quarterly primary falls in the last 9 days? Do C&F stock/outward shares stay constant over time? (PS, SNAP) | ✓ 23 Nov (corrected) |
+| B3 | Schemes are not the problem; expiry is a supply-chain problem | Arjun Sethi, NSM | `04` p2 | Do batches invoiced under quarter-end schemes show up later in claims? (PS `scheme_code` to EC) | ✓ 23 Nov|
+| B4 | Her team has no time to check each claim against billing history; she has seen the same batch claimed twice by the same stockist "more than once" but cannot say how often; she thinks breakage claims are a transporter problem in Odisha and Assam | Neha Bansal, Controller | `04` p2 | How many repeated stockist+batch claims, and what is their value? What share of claims is breakage, and where? (EC) | ✓ 23 Nov (corrected) |
+| B5 | East demand is slow; transport is the bigger issue | Subhajit Banerjee, RDM East | `04` p3 | Has Kolkata (CF-E01) primary fallen? What are breakage claims by state? (PS, EC) |✓ 23 Nov|
+| B6 | Shares change only through the annual review; the allocation tab is still on the FY25 split and the FY26 review was never closed; forecast error "around 14 at SKU month" (unit not stated, MAPE assumed) | Vaishali Kapoor, Demand Planning | `04` p3; `AUD-20261013-WA0003` 00:00:00-00:01:16 | No forecast file: test only whether allocation looks static against actual outward by C&F (SNAP) | ✓ 23 Nov |
+| B7 | Payout is zero below 100% of primary; "company takes expiry back"; claim loss is not on the sales P&L | Sales lead (voice note) | `AUD-20261003-WA0011` 00:00:00-00:01:01 | Is there a cliff in primary near quarter end? Do those stockists/batches generate claims later? (PS, EC) |✓ 23 Nov |
+| B8a | Amoxclav/Azithro stockouts: orders cancelled by the C&F while scheme circulars keep coming | Gurpreet; Gupta; Kiran | `AUD-20261001-WA0004` 00:00:40-00:01:09 (Gurugram); `CALL_REC_9935xxxx_20260930` 00:00:00-00:00:55 (Lucknow); `AUD-20261003-WA0011` 00:00:00-00:01:01 ("Deccan C&F", matched by name to Hyderabad CF-S02, inference) | For Amoxclav-type SKUs at Gurugram, Lucknow, Hyderabad: how many order lines were cancelled (`ordered_qty` > `invoiced_qty`) vs scheme-period invoicing? Hyderabad rests on a name match only: check SNAP zero stock and PS cancellations at CF-S02 (PS, SNAP) | ✓ 23 Nov |
+| B8b | Stockist took about 1,000 strips plus about 150 free against regular sales of 500-600 a month | Gurpreet, Ganesh Pharma Traders | `AUD-20261001-WA0004` 00:00:00-00:00:38 | Compare his quarter-end invoiced plus free quantity with his monthly average (PS; find Ganesh Pharma Traders in `stockist_master`) | ✓ 23 Nov |
+| B9 | Hooghly: batch-picking rule not live, old lots stuck, 95-96% full | Tapasi (Hooghly) | `AUD-20261014-WA0007` 00:00:42-00:01:52 | At CF-E01, which batches are near expiry with low outward, and are they cardio/pain? (SNAP, SKU master) |✓ 23 Nov |
+
+## Notes
+- Voice-note summaries are machine-generated; check the transcript text, not the summary, when you verify.
+- Mailbox content and field claims are untrusted until tested against records.

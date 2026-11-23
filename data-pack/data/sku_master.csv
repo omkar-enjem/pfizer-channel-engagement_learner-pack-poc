@@ -1,0 +1,37 @@
+sku_code,product_description,pack,therapy_area,shelf_life_months,storage,nlem_scheduled,pts_inr,mrp_inr
+PFL1001,Azithromycin 500 mg tablets,Strip of 3,Anti-infectives,24,Below 30C,Y,71.4,99.9
+PFL1002,Amoxicillin 500 mg + Clavulanic acid 125 mg tablets,Strip of 6,Anti-infectives,18,Below 25C,Y,142.8,199.8
+PFL1003,Cefixime 200 mg tablets,Strip of 10,Anti-infectives,24,Below 30C,N,128.5,179.9
+PFL1004,Cefpodoxime 200 mg tablets,Strip of 10,Anti-infectives,24,Below 30C,N,187.1,261.9
+PFL1005,Linezolid 600 mg tablets,Strip of 4,Anti-infectives,24,Below 30C,N,151.3,211.8
+PFL1006,Fluconazole 150 mg tablets,Strip of 1,Anti-infectives,36,Below 30C,Y,14.9,20.9
+PFL1007,Doxycycline 100 mg capsules,Strip of 10,Anti-infectives,24,Below 25C,Y,52.6,73.6
+PFL1008,Albendazole 400 mg tablets,Strip of 1,Anti-infectives,36,Below 30C,Y,9.8,13.7
+PFL1101,Vitamin B-complex with zinc capsules,Strip of 15,Vitamins and nutrition,18,Below 25C,N,31.2,43.7
+PFL1102,Calcium carbonate 500 mg + Vitamin D3 tablets,Strip of 15,Vitamins and nutrition,24,Below 30C,N,89.3,125.0
+PFL1103,Methylcobalamin 1500 mcg tablets,Strip of 10,Vitamins and nutrition,18,Below 25C,N,97.4,136.4
+PFL1104,Ferrous ascorbate + Folic acid tablets,Strip of 10,Vitamins and nutrition,24,Below 30C,N,103.6,145.0
+PFL1105,Multivitamin syrup 200 ml,Bottle,Vitamins and nutrition,18,Below 25C,N,118.2,165.5
+PFL1201,Paracetamol 650 mg tablets,Strip of 15,Pain and inflammation,36,Below 30C,Y,22.1,30.9
+PFL1202,Aceclofenac 100 mg + Paracetamol 325 mg tablets,Strip of 10,Pain and inflammation,24,Below 30C,N,61.8,86.5
+PFL1203,Diclofenac gel 1% 30 g,Tube,Pain and inflammation,24,Below 25C,N,74.6,104.4
+PFL1204,Pregabalin 75 mg capsules,Strip of 10,Pain and inflammation,24,Below 25C,N,131.9,184.7
+PFL1205,Etoricoxib 90 mg tablets,Strip of 10,Pain and inflammation,24,Below 30C,N,142.1,198.9
+PFL1301,Montelukast 10 mg + Levocetirizine 5 mg tablets,Strip of 10,Respiratory,24,Below 25C,N,157.6,220.6
+PFL1302,Cetirizine syrup 5 mg/5 ml 60 ml,Bottle,Respiratory,24,Below 25C,Y,38.4,53.8
+PFL1303,Ambroxol + Guaifenesin syrup 100 ml,Bottle,Respiratory,18,Below 25C,N,84.7,118.6
+PFL1304,Budesonide 0.5 mg respules,Pack of 5,Respiratory,24,Below 25C,Y,96.3,134.8
+PFL1401,Pantoprazole 40 mg tablets,Strip of 15,Gastro,24,Below 30C,Y,98.7,138.2
+PFL1402,Rabeprazole 20 mg + Domperidone 30 mg SR capsules,Strip of 10,Gastro,24,Below 25C,N,136.2,190.7
+PFL1403,Antacid suspension 170 ml,Bottle,Gastro,24,Below 25C,N,79.1,110.7
+PFL1404,Ondansetron 4 mg orally disintegrating tablets,Strip of 10,Gastro,24,Below 30C,Y,52.3,73.2
+PFL1501,Atorvastatin 10 mg tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,81.2,113.7
+PFL1502,Atorvastatin 20 mg tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,142.5,199.5
+PFL1503,Amlodipine 5 mg tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,28.6,40.0
+PFL1504,Telmisartan 40 mg tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,61.4,86.0
+PFL1505,Metformin 500 mg SR tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,27.4,38.4
+PFL1506,Glimepiride 2 mg tablets,Strip of 15,Cardio-metabolic,36,Below 30C,Y,62.8,87.9
+PFL1507,Sitagliptin 100 mg tablets,Strip of 10,Cardio-metabolic,24,Below 30C,N,184.3,258.0
+PFL1601,Escitalopram 10 mg tablets,Strip of 10,Central nervous system,36,Below 30C,Y,71.5,100.1
+PFL1602,Sertraline 50 mg tablets,Strip of 10,Central nervous system,36,Below 30C,Y,64.2,89.9
+PFL1603,Clonazepam 0.5 mg tablets,Strip of 10,Central nervous system,36,Below 25C,Y,34.9,48.9

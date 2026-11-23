@@ -1,0 +1,157 @@
+stockist_code,stockist_name,cnf_code,city,state,appointed_on,drug_licence_no,gstin
+STK0001,Om Pharma Distributors,CF-N01,Gurugram,Haryana,,HR-20B-81619,06AACFE4667E1Z5
+STK0002,Royal Pharma Traders,CF-N01,New Delhi,Delhi,,DL-20B-99486,07AACKK8663D1Z5
+STK0003,Krishna Distributors,CF-N01,Faridabad,Haryana,,HR-21B-33242,06AAFJC3471C1Z2
+STK0004,Unique Healthcare,CF-N01,,Haryana,,HR-21B-38359,06AAFJC8298H1Z1
+STK0005,Sai Drug House,CF-N01,Jaipur,Rajasthan,,RJ-21B-68766,08AACMN8337C1Z2
+STK0006,Sri Pharma Distributors,CF-N01,Chandigarh,Chandigarh,,CH-20B-79954,04AACEE4638G1Z6
+STK0007,Ganesh Pharma Traders,CF-N01,,Punjab,,PB-20B-26855,03AAFNA5478J1Z7
+STK0008,Annapurna Distributors,CF-N01,Gurugram,Haryana,,HR-20B-25029,06AAFBH5297B1Z8
+STK0009,Apex Healthcare,CF-N01,New Delhi,Delhi,,DL-21B-84598,07AACDJ5998A1Z4
+STK0010,Om Drug House,CF-N01,Faridabad,Haryana,,HR-21B-44805,06AACJE9964D1Z2
+STK0011,Royal Pharma Distributors,CF-N01,Panipat,Haryana,,HR-20B-25673,06AACHL3002A1Z8
+STK0012,Krishna Pharma Traders,CF-N01,Jaipur,Rajasthan,,RJ-21B-88196,08AACLP1832A1Z2
+STK0013,Unique Distributors,CF-N01,,Chandigarh,,CH-21B-69644,04AAFNL7172D1Z8
+STK0014,Sai Healthcare,CF-N01,Ludhiana,Punjab,,PB-20B-81968,03AACEC1262G1Z1
+STK0015,Sri Drug House,CF-N01,Gurugram,Haryana,,HR-20B-75722,06AAFJD1453F1Z2
+STK0016,Ganesh Pharma Distributors,CF-N01,New Delhi,Delhi,,DL-21B-68270,07AACDH9569J1Z9
+STK0017,Annapurna Pharma Traders,CF-N01,Faridabad,Haryana,,HR-21B-85999,06AAFMC5658E1Z6
+STK0018,Apex Distributors,CF-N01,Panipat,Haryana,,HR-20B-63781,06AAFPB2620K1Z3
+STK0019,Om Healthcare,CF-N01,Jaipur,Rajasthan,,RJ-21B-33516,08AACMB2479H1Z5
+STK0020,Royal Drug House,CF-N01,Chandigarh,Chandigarh,,CH-20B-35498,04AACCJ7473D1Z4
+STK0021,Krishna Pharma Distributors,CF-N01,Ludhiana,Punjab,,PB-20B-48679,03AACPJ6147B1Z3
+STK0022,Unique Pharma Traders,CF-N01,Gurugram,Haryana,,HR-21B-69803,06AAFLF3988D1Z4
+STK0023,Sai Distributors,CF-N01,New Delhi,Delhi,,DL-20B-16563,07AACEE7348E1Z6
+STK0024,Sri Healthcare,CF-N01,Faridabad,Haryana,,HR-20B-42286,06AACKN2388J1Z3
+STK0025,Ganesh Drug House,CF-N01,Panipat,Haryana,,HR-20B-31033,06AACKG5413F1Z7
+STK0026,Maa Medisales,CF-N02,Lucknow,Uttar Pradesh,,UP-20B-41682,09AACKE8228C1Z5
+STK0027,Lakshmi Pharma,CF-N02,Kanpur,Uttar Pradesh,,UP-21B-94729,09AACFP4898C1Z4
+STK0028,Matrix Medicos,CF-N02,Varanasi,Uttar Pradesh,,UP-21B-19533,09AAFBC9521D1Z4
+STK0029,Shree Medical Agencies,CF-N02,Gorakhpur,Uttar Pradesh,,UP-21B-64093,09AACAG8147F1Z4
+STK0030,Jai Enterprises,CF-N02,Prayagraj,Uttar Pradesh,,UP-21B-37488,09AAFBF7769G1Z5
+STK0031,City Medisales,CF-N02,Bareilly,Uttar Pradesh,,UP-20B-95786,09AAFFG9181A1Z4
+STK0032,Balaji Pharma,CF-N02,Lucknow,Uttar Pradesh,,UP-21B-27611,09AAFFH1999G1Z2
+STK0033,Prime Medicos,CF-N02,Kanpur,Uttar Pradesh,,UP-21B-10792,09AAFHC4204E1Z6
+STK0034,New Medical Agencies,CF-N02,Varanasi,Uttar Pradesh,,UP-21B-81791,09AACAF9660J1Z7
+STK0035,Maa Enterprises,CF-N02,Gorakhpur,Uttar Pradesh,,UP-20B-13535,09AACAE1722K1Z9
+STK0036,Lakshmi Medisales,CF-N02,Prayagraj,Uttar Pradesh,,UP-20B-20553,09AAFCE5581H1Z9
+STK0037,Matrix Pharma,CF-N02,Bareilly,Uttar Pradesh,,UP-20B-13819,09AAFAE6459J1Z1
+STK0038,Shree Medicos,CF-N02,Lucknow,Uttar Pradesh,,UP-21B-73891,09AACPJ1446H1Z8
+STK0039,Jai Medical Agencies,CF-N02,Kanpur,Uttar Pradesh,,UP-20B-12397,09AACML3762A1Z9
+STK0040,City Enterprises,CF-N02,Varanasi,Uttar Pradesh,,UP-20B-77281,09AAFDC6764K1Z2
+STK0041,Balaji Medisales,CF-N02,Gorakhpur,Uttar Pradesh,,UP-20B-86225,09AAFHA7957K1Z9
+STK0042,Prime Pharma,CF-N02,Prayagraj,Uttar Pradesh,,UP-21B-82452,09AACMA8990D1Z4
+STK0043,New Medicos,CF-N02,Bareilly,Uttar Pradesh,,UP-21B-31246,09AACAE7040E1Z7
+STK0044,Maa Medical Agencies,CF-N02,Lucknow,Uttar Pradesh,,UP-20B-24372,09AAFHF7735H1Z3
+STK0045,Lakshmi Enterprises,CF-N02,Kanpur,Uttar Pradesh,,UP-20B-80242,09AACHE2826H1Z2
+STK0046,Matrix Medisales,CF-N02,Varanasi,Uttar Pradesh,,UP-21B-94937,09AACEE5798C1Z9
+STK0047,Shree Pharma,CF-N02,Gorakhpur,Uttar Pradesh,,UP-20B-16109,09AACDK2855A1Z8
+STK0048,Jai Medicos,CF-N02,Prayagraj,Uttar Pradesh,,UP-20B-37555,09AACKA6412E1Z2
+STK0049,City Medical Agencies,CF-N02,Bareilly,Uttar Pradesh,,UP-20B-93415,09AACJH2204H1Z9
+STK0050,Balaji Enterprises,CF-N02,Lucknow,Uttar Pradesh,,UP-20B-25344,09AACCL2959F1Z4
+STK0051,Ganesh Pharma Distributors,CF-E01,Kolkata,West Bengal,,WB-20B-60699,19AACDK6009A1Z6
+STK0052,Annapurna Pharma Traders,CF-E01,Howrah,West Bengal,,WB-21B-27576,19AACCH9407D1Z4
+STK0053,Apex Distributors,CF-E01,Siliguri,West Bengal,,WB-20B-33629,19AAFMN1905J1Z7
+STK0054,Om Healthcare,CF-E01,Durgapur,West Bengal,,WB-20B-47675,19AAFDF5768G1Z4
+STK0055,Royal Drug House,CF-E01,Bhubaneswar,Odisha,,OD-21B-79075,21AACPA4030B1Z3
+STK0056,Krishna Pharma Distributors,CF-E01,Guwahati,Assam,,AS-20B-89839,18AACFP8758H1Z7
+STK0057,Unique Pharma Traders,CF-E01,Patna,Bihar,,BR-21B-36429,10AAFGH6941J1Z4
+STK0058,Sai Distributors,CF-E01,Kolkata,West Bengal,,WB-21B-26402,19AACKB3214K1Z6
+STK0059,Sri Healthcare,CF-E01,Howrah,West Bengal,,WB-21B-55077,19AAFLB8079B1Z2
+STK0060,Ganesh Drug House,CF-E01,Siliguri,West Bengal,,WB-20B-75057,19AAFFA6156G1Z2
+STK0061,Annapurna Pharma Distributors,CF-E01,Durgapur,West Bengal,,WB-20B-29993,19AAFAE1298H1Z1
+STK0062,Apex Pharma Traders,CF-E01,Bhubaneswar,Odisha,,OD-21B-61745,21AACJK9783G1Z4
+STK0063,Om Distributors,CF-E01,Guwahati,Assam,,AS-21B-44888,18AAFMH8948E1Z2
+STK0064,Royal Healthcare,CF-E01,Patna,Bihar,,BR-20B-51094,10AACLG5789E1Z5
+STK0065,Krishna Drug House,CF-E01,Kolkata,West Bengal,,WB-20B-35814,19AAFHH4224F1Z8
+STK0066,Unique Pharma Distributors,CF-E01,Howrah,West Bengal,,WB-21B-43363,19AAFJE6316H1Z8
+STK0067,Sai Pharma Traders,CF-E01,Siliguri,West Bengal,,WB-20B-88455,19AAFKL2623G1Z7
+STK0068,Sri Distributors,CF-E01,Durgapur,West Bengal,,WB-20B-27675,19AAFGD8530K1Z4
+STK0069,Ganesh Healthcare,CF-E01,Bhubaneswar,Odisha,,OD-21B-42795,21AACGG9492D1Z7
+STK0070,Annapurna Drug House,CF-E01,Guwahati,Assam,,AS-20B-80661,18AACGJ3378H1Z4
+STK0071,Apex Pharma Distributors,CF-E01,Patna,Bihar,,BR-21B-42941,10AACFD6053G1Z2
+STK0072,Om Pharma Traders,CF-E01,Kolkata,West Bengal,,WB-21B-82182,19AAFHB4518E1Z4
+STK0073,Royal Distributors,CF-E01,Howrah,West Bengal,,WB-21B-12125,19AAFJK7648H1Z9
+STK0074,Krishna Healthcare,CF-E01,Siliguri,West Bengal,,WB-21B-53749,19AAFPG6724G1Z1
+STK0075,Unique Drug House,CF-E01,Durgapur,West Bengal,,WB-21B-37684,19AAFCD8606F1Z9
+STK0076,Balaji Medisales,CF-W01,Mumbai,Maharashtra,,MH-21B-35931,27AACKH6051C1Z5
+STK0077,Prime Pharma,CF-W01,Thane,Maharashtra,,MH-21B-25869,27AAFJN7773D1Z6
+STK0078,New Medicos,CF-W01,Pune,Maharashtra,,MH-21B-87105,27AAFDK1432B1Z4
+STK0079,Maa Medical Agencies,CF-W01,Nashik,Maharashtra,,MH-20B-99751,27AAFDC6115A1Z6
+STK0080,Lakshmi Enterprises,CF-W01,Nagpur,Maharashtra,,MH-21B-46318,27AAFGA1668H1Z8
+STK0081,Matrix Medisales,CF-W01,Panaji,Goa,,GA-21B-16359,30AACPE5878G1Z7
+STK0082,Shree Pharma,CF-W01,Mumbai,Maharashtra,,MH-21B-52953,27AAFJF4841J1Z9
+STK0083,Jai Medicos,CF-W01,Thane,Maharashtra,,MH-21B-43018,27AAFNP9522D1Z9
+STK0084,City Medical Agencies,CF-W01,Pune,Maharashtra,,MH-21B-93845,27AACGB7881H1Z7
+STK0085,Balaji Enterprises,CF-W01,Nashik,Maharashtra,,MH-21B-59962,27AACJL3474F1Z6
+STK0086,Prime Medisales,CF-W01,Nagpur,Maharashtra,,MH-20B-58047,27AAFPE6190G1Z9
+STK0087,New Pharma,CF-W01,Panaji,Goa,,GA-21B-81423,30AAFKC2359C1Z9
+STK0088,Maa Medicos,CF-W01,Mumbai,Maharashtra,,MH-21B-88146,27AACCC1989F1Z5
+STK0089,Lakshmi Medical Agencies,CF-W01,Thane,Maharashtra,,MH-20B-21453,27AAFAG2779E1Z7
+STK0090,Matrix Enterprises,CF-W01,Pune,Maharashtra,,MH-20B-30590,27AAFNJ8362A1Z5
+STK0091,Shree Medisales,CF-W01,Nashik,Maharashtra,,MH-21B-84649,27AACMC5690A1Z5
+STK0092,Jai Pharma,CF-W01,Nagpur,Maharashtra,,MH-21B-83356,27AAFPC8364F1Z5
+STK0093,City Medicos,CF-W01,Panaji,Goa,,GA-21B-36410,30AACKK9743A1Z5
+STK0094,Balaji Medical Agencies,CF-W01,Mumbai,Maharashtra,,MH-21B-91785,27AAFNM6039C1Z5
+STK0095,Prime Enterprises,CF-W01,Thane,Maharashtra,,MH-20B-76165,27AACFM8937J1Z3
+STK0096,New Medisales,CF-W01,Pune,Maharashtra,,MH-21B-56697,27AAFML5151G1Z8
+STK0097,Maa Pharma,CF-W01,Nashik,Maharashtra,,MH-20B-29751,27AACHC8991C1Z9
+STK0098,Lakshmi Medicos,CF-W01,Nagpur,Maharashtra,,MH-21B-49205,27AAFDL6221C1Z8
+STK0099,Matrix Medical Agencies,CF-W01,,Goa,,GA-20B-13193,30AAFDK1127H1Z5
+STK0100,Shree Enterprises,CF-W01,Mumbai,Maharashtra,,MH-21B-85621,27AACGD1354G1Z3
+STK0101,Unique Pharma Distributors,CF-S01,Chennai,Tamil Nadu,,TN-20B-93178,33AAFFH9333B1Z1
+STK0102,Sai Pharma Traders,CF-S01,Coimbatore,Tamil Nadu,,TN-20B-34468,33AACDB6628B1Z6
+STK0103,Sri Distributors,CF-S01,Madurai,Tamil Nadu,,TN-21B-42061,33AACKD6196K1Z3
+STK0104,Ganesh Healthcare,CF-S01,Tiruchirappalli,Tamil Nadu,,TN-20B-86002,33AAFHP8775H1Z9
+STK0105,Annapurna Drug House,CF-S01,Puducherry,Puducherry,,PY-20B-81285,34AACBJ1401G1Z5
+STK0106,Apex Pharma Distributors,CF-S01,Chennai,Tamil Nadu,,TN-21B-87132,33AAFEP2254A1Z3
+STK0107,Om Pharma Traders,CF-S01,Coimbatore,Tamil Nadu,,TN-21B-69529,33AACKP4155C1Z9
+STK0108,Royal Distributors,CF-S01,Madurai,Tamil Nadu,,TN-21B-53941,33AACAM8434F1Z6
+STK0109,Krishna Healthcare,CF-S01,Tiruchirappalli,Tamil Nadu,,TN-20B-45861,33AACEA4325H1Z7
+STK0110,Unique Drug House,CF-S01,Puducherry,Puducherry,,PY-21B-17429,34AACLC6214F1Z4
+STK0111,Sai Pharma Distributors,CF-S01,Chennai,Tamil Nadu,,TN-21B-97745,33AAFJG5478F1Z2
+STK0112,Sri Pharma Traders,CF-S01,Coimbatore,Tamil Nadu,,TN-20B-63935,33AACFD8115K1Z3
+STK0113,Ganesh Distributors,CF-S01,Madurai,Tamil Nadu,,TN-20B-37489,33AACKK4120B1Z8
+STK0114,Annapurna Healthcare,CF-S01,Tiruchirappalli,Tamil Nadu,,TN-21B-55430,33AACFH1006K1Z7
+STK0115,Apex Drug House,CF-S01,Puducherry,Puducherry,,PY-20B-55732,34AACKC5258D1Z5
+STK0116,Om Pharma Distributors,CF-S01,Chennai,Tamil Nadu,,TN-20B-25179,33AAFJK8444H1Z5
+STK0117,Royal Pharma Traders,CF-S01,Coimbatore,Tamil Nadu,,TN-21B-23283,33AAFNK3480E1Z2
+STK0118,Krishna Distributors,CF-S01,Madurai,Tamil Nadu,,TN-20B-99639,33AAFDC8641F1Z1
+STK0119,Unique Healthcare,CF-S01,Tiruchirappalli,Tamil Nadu,,TN-20B-18076,33AAFBK5850A1Z3
+STK0120,Sai Drug House,CF-S01,Puducherry,Puducherry,,PY-20B-62604,34AACJK7855A1Z5
+STK0121,Sri Pharma Distributors,CF-S01,Chennai,Tamil Nadu,,TN-20B-64985,33AACFB1101D1Z1
+STK0122,Ganesh Pharma Traders,CF-S01,Coimbatore,Tamil Nadu,,TN-20B-12023,33AACBF8761K1Z5
+STK0123,Annapurna Distributors,CF-S01,Madurai,Tamil Nadu,,TN-21B-23776,33AACEP8982K1Z7
+STK0124,Apex Healthcare,CF-S01,Tiruchirappalli,Tamil Nadu,,TN-21B-77283,33AACBH7495E1Z2
+STK0125,Om Drug House,CF-S01,Puducherry,Puducherry,,PY-21B-30244,34AACNN6474A1Z7
+STK0126,Shree Medisales,CF-S02,Hyderabad,Telangana,,TS-20B-43779,36AAFCK7865B1Z7
+STK0127,Jai Pharma,CF-S02,Warangal,Telangana,,TS-20B-42562,36AAFND9690D1Z6
+STK0128,City Medicos,CF-S02,Vijayawada,Andhra Pradesh,,AP-20B-78515,37AACLC9555J1Z6
+STK0129,Balaji Medical Agencies,CF-S02,Visakhapatnam,Andhra Pradesh,,AP-21B-20569,37AAFMC1154D1Z1
+STK0130,Prime Enterprises,CF-S02,Guntur,Andhra Pradesh,,AP-20B-15711,37AAFGF4588F1Z8
+STK0131,New Medisales,CF-S02,Hyderabad,Telangana,,TS-21B-83972,36AAFHD2292D1Z5
+STK0132,Maa Pharma,CF-S02,Warangal,Telangana,,TS-20B-58246,36AACGP3444C1Z2
+STK0133,Lakshmi Medicos,CF-S02,Vijayawada,Andhra Pradesh,,AP-21B-33286,37AAFHD6246C1Z1
+STK0134,Matrix Medical Agencies,CF-S02,Visakhapatnam,Andhra Pradesh,,AP-20B-93502,37AAFEP4967E1Z2
+STK0135,Shree Enterprises,CF-S02,Guntur,Andhra Pradesh,,AP-21B-59884,37AACPG6378D1Z9
+STK0136,Jai Medisales,CF-S02,Hyderabad,Telangana,,TS-20B-76433,36AAFMD1369E1Z4
+STK0137,City Pharma,CF-S02,Warangal,Telangana,,TS-21B-18018,36AAFBH7615F1Z9
+STK0138,Balaji Medicos,CF-S02,Vijayawada,Andhra Pradesh,,AP-21B-80514,37AAFGC6814B1Z7
+STK0139,Prime Medical Agencies,CF-S02,Visakhapatnam,Andhra Pradesh,,AP-20B-62436,37AACDK9282A1Z7
+STK0140,New Enterprises,CF-S02,Guntur,Andhra Pradesh,,AP-20B-24449,37AACJF5996F1Z8
+STK0141,Maa Medisales,CF-S02,Hyderabad,Telangana,,TS-20B-84158,36AAFJE9131B1Z8
+STK0142,Lakshmi Pharma,CF-S02,Warangal,Telangana,,TS-20B-41798,36AACJL7067J1Z7
+STK0143,Matrix Medicos,CF-S02,Vijayawada,Andhra Pradesh,,AP-20B-11874,37AACJH4100J1Z5
+STK0144,Shree Medical Agencies,CF-S02,Visakhapatnam,Andhra Pradesh,,AP-20B-18647,37AACEN5045F1Z2
+STK0145,Jai Enterprises,CF-S02,Guntur,Andhra Pradesh,,AP-21B-81104,37AAFHA3282K1Z4
+STK0146,City Medisales,CF-S02,Hyderabad,Telangana,,TS-21B-10463,36AAFDN4805B1Z2
+STK0147,Balaji Pharma,CF-S02,Warangal,Telangana,,TS-20B-53571,36AACLE6067J1Z4
+STK0148,Prime Medicos,CF-S02,Vijayawada,Andhra Pradesh,,AP-20B-98848,37AACKL1225H1Z4
+STK0149,New Medical Agencies,CF-S02,Visakhapatnam,Andhra Pradesh,,AP-21B-99286,37AACLL6420J1Z7
+STK0150,Maa Enterprises,CF-S02,Guntur,Andhra Pradesh,,AP-21B-43193,37AACLB7780F1Z8
+STK0151,Om Pharma Distributors,CF-N02,Varanasi,Uttar Pradesh,01-11-2025,UP-21B-32495,09AACLH7785G1Z7
+STK0152,Royal Pharma Traders,CF-N02,Gorakhpur,Uttar Pradesh,21-11-2025,UP-20B-63442,09AACGP2563K1Z3
+STK0153,Krishna Distributors,CF-N02,Prayagraj,Uttar Pradesh,11-12-2025,UP-21B-57582,09AAFGN7187C1Z3
+STK0154,Unique Healthcare,CF-N02,Bareilly,Uttar Pradesh,31-12-2025,UP-21B-38452,09AACAK1692C1Z5
+STK0155,Sai Drug House,CF-N02,Lucknow,Uttar Pradesh,20-01-2026,UP-21B-40981,09AACMA4398G1Z6
+STK0156,Sri Pharma Distributors,CF-N02,Kanpur,Uttar Pradesh,09-02-2026,UP-21B-90791,09AACJF8193A1Z3
