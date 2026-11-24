@@ -9,3 +9,6 @@ data-clean/
 __pycache__/
 *.pyc
 .env
+
+# Local virtual environment
+.venv/
