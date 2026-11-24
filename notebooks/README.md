@@ -8,6 +8,7 @@ Run in order. Raw data in `data-pack/data/` is **read-only**: never open it in E
 | 1 | `step3_evidence.ipynb` | E0 checks the raw files are intact, then reproduces every number quoted during the Step 3 data checks | nothing |
 | 2 | `step3_clean.ipynb` | Loads the 7 CSVs as text, standardises dates/codes/numbers, drops exact duplicates, flags conflicts, validates | `data-clean/*.csv` (with `src_row` = line number in the raw file), and the audit trail below (including `cleaning_log.csv`) |
 | 3 | `step3_links.ipynb` | 3.4: checks every code exists in the file it points to, explains the 971 claim batches missing from `batch_master`, saves link flags | `data-clean/link_flags_expiry_claims.csv` |
+| 4 | `step3_dictionary.ipynb` | 3.5: data dictionary (every column: meaning, source page, documented / listed / added) and data-quality log (every problem, action, basis). Run after `step3_links.ipynb` | `notes/data_dictionary.md`, `notes/data_quality_log.md`, `data-clean/audit/data_dictionary.csv`, `data-clean/audit/data_quality_log.csv` |
 
 Setup: `pip install -r notebooks/requirements.txt` (pandas, matplotlib, xlsxwriter, ipykernel), then open in VS Code with a Python kernel.
 Run cells top to bottom (Shift+Enter). Each section ends with a **Check** line saying what you should see.

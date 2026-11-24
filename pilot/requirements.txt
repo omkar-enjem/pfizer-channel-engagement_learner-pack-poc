@@ -1,0 +1,4 @@
+# Step 3.7 only needs pandas and pytest. In Step 6 merge these with starter/requirements.txt
+# (fastapi, langgraph, langchain-core, langchain-openai, python-dotenv).
+pandas>=2.2
+pytest>=8

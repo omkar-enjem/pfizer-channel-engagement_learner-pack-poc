@@ -1,7 +1,8 @@
 # Rules register (Step 2)
 
 Every rule with a number in it, from the client documents.  
-**Verification process:** For each rule, cross-check the details against the cited page in the source document. After verification, update the "Verified" column with the date and your initials, or note any 
+**Verification process:** For each rule, cross-check the details against the cited page in the source document. After verification, update the "Verified" column with the date and your initials, or note any corrections made.  
+Refer to the [verification checklist](./verification-checklist.md) for step-by-step guidance.
 
 Data tables: EC = `expiry_claims`, PS = `primary_sales`, SNAP = `cnf_stock_snapshot`.
 
