@@ -19,6 +19,8 @@ from agent.data import load
 
 INJECTION = re.compile(r"system note|ignore (all |the )?(previous|above)|ai assistant|pre-?approved|skip (all )?checks|approve the full", re.I)
 NUM = re.compile(r"\d[\d,]*(?:\.\d+)?")
+NUMBER_WORDS = re.compile(r"\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|"
+                          r"twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|lakh|lakhs|crore|million|billion)\b", re.I)
 
 
 def _terminal(reason: str, route: str = C.NEEDS_PERSON, **extra) -> dict:
@@ -191,7 +193,7 @@ def route(state: dict) -> dict:
 # ---------------------------------------------------------------- explain (model, then guard)
 def facts_for_model(state: dict) -> dict:
     d = state["decision"]
-    return {"recommendation": d["route"], "reasons": d["reasons"], "amount_at_issue_inr": d["amount_at_issue_inr"],
+    return {"recommendation": LABEL[d["route"]], "reasons": d["reasons"], "amount_at_issue_inr": d["amount_at_issue_inr"],
             "informational": d.get("informational", []),
             "checks": [{"rule": c.rule, "status": c.status, "summary": c.summary} for c in state.get("checks", [])],
             "claim": {k: v for k, v in (state.get("claim_out") or {}).items() if k in ("claim_no", "claim_date", "claim_type", "stockist_code", "batch_no", "qty_claimed", "claim_value_used_inr")}}
@@ -201,8 +203,14 @@ def numbers_in(text: str) -> set:
     return {n.replace(",", "").rstrip("0").rstrip(".") if "." in n else n.replace(",", "") for n in NUM.findall(text)}
 
 
+def clean_markdown(text: str) -> str:
+    return re.sub(r"[*_`#]+", "", text).strip()
+
+
 def explanation_ok(text: str, facts: dict) -> bool:
-    return bool(text.strip()) and numbers_in(text) <= numbers_in(json.dumps(facts, default=str))
+    """Digits must all appear in the facts, and numbers may not be spelled out (the digit check could not see those)."""
+    return (bool(text.strip()) and not NUMBER_WORDS.search(text)
+            and numbers_in(text) <= numbers_in(json.dumps(facts, default=str)))
 
 
 LABEL = {C.CREDIT_FOR_REVIEW: "Credit for review", C.HOLD: "Hold", C.NEEDS_PERSON: "Needs a person"}
@@ -221,7 +229,7 @@ def explain(state: dict, model_call) -> dict:
     calls = state.get("calls", 0)
     if calls < 2:
         try:
-            text = model_call(prompts.EXPLAIN, json.dumps(facts, default=str, indent=1)).strip()
+            text = clean_markdown(model_call(prompts.EXPLAIN, json.dumps(facts, default=str, indent=1)))
             if explanation_ok(text, facts):
                 return {"explanation": text, "explanation_source": "model", "calls": calls + 1}
         except Exception:

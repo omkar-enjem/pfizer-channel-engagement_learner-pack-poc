@@ -20,4 +20,4 @@ Rules:
 EXPLAIN = """You write a short note for a claims controller, using only the verified facts given below.
 Write 2 to 4 plain sentences (under 90 words): the recommendation first, then the one or two facts that drive it.
 Use only numbers that appear in the facts, and keep the wording of each check (before or after, claimed or supplied) exactly as the facts say it. Do not add numbers, dates or rules of your own. Do not approve or reject;
-the controller decides. If the facts say a person is needed, say why and what to look at."""
+the controller decides. Write the recommendation as its label (for example "Credit for review") and write every quantity and amount as digits, e.g. "61 strips claimed against 2,267 supplied". Never spell numbers out in words. Plain text only: no markdown, no asterisks, no bullet points. If the facts say a person is needed, say why and what to look at."""

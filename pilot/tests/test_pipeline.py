@@ -141,3 +141,15 @@ def test_repeat_line_inside_one_email_is_a_probable_duplicate():
     assert len(out) == 2
     assert not any(c["status"] == "flag" and c["rule"] == "R4" for c in out[0]["checks"])
     assert any(c["status"] == "flag" and c["rule"] == "R4" for c in out[1]["checks"])
+
+
+def test_numbers_spelled_out_are_rejected():
+    assert not P.explanation_ok("Sixty-one strips claimed", {"x": 61})
+    assert not P.explanation_ok("two thousand supplied", {"x": 2000})
+    r = one("CLM-2608-02345", fake(explain="Credit for review. Four hundred forty-seven strips claimed."))
+    assert r["explanation_source"] == "template"
+
+
+def test_markdown_marks_are_removed():
+    r = one("CLM-2608-02345", fake(explain="**Credit for review**: fine."))
+    assert "*" not in r["explanation"] and r["explanation_source"] == "model"
