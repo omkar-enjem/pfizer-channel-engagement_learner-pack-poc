@@ -18,11 +18,11 @@ Data tables: EC = `expiry_claims`, PS = `primary_sales`, SNAP = `cnf_stock_snaps
 | R8 | Free goods at PTS must not exceed 3% of quarter primary; above that needs CFO approval | `02` p2 §4.3-4.4 | PS: `free_qty` x `pts_inr` by quarter |✓ 23 Nov  |
 | R9 | Quarter-end scheme valid 22nd to month-end of the quarter's last month; minimum order 1.5x the stockist's 3-month average for the SKU | `02` p5 Annex B; `02` p2 §4.2 | PS: `scheme_code` lines, dates, quantities | ✓ 23 Nov |
 | R10 | C&F topped up to 2 months of allocated volume; one shipment at most 1.2 months | `03` p3 §2.2 | SNAP `qty_on_hand_packs` vs `avg_monthly_outward_packs` | ✓ 23 Nov |
-| R11 | Short supply: invoice what is available, cancel the balance, no back orders | `03` p3 §2.4 | PS **per order line** (`invoice_no` + `sku_code`): sum of `invoiced_qty` across batch rows vs `ordered_qty`, which sits on the first row only (`01` p3 §5.4). Never compare row by row | ✓ 23 Nov; test corrected 24 Nov |
+| R11 | Short supply: invoice what is available, cancel the balance, no back orders | `03` p3 §2.4 | PS **per order line** (`invoice_no` + `sku_code`): sum of `invoiced_qty` + `free_qty` across batch rows vs `ordered_qty`, which sits on the first row only (`01` p3 §5.4) and includes the free packs on scheme lines. Never compare row by row | ✓ 23 Nov; test corrected 24 Nov |
 | R12 | Claim number format CLM-yymm-nnnnn | `03` p3 §2.6 | EC `claim_no` format; yymm vs `claim_date` |✓ 23 Nov  |
 | R13 | No scheme to a stockist holding more than 2.5 months of average secondary | `02` p3 §4.5 | NOT TESTABLE: no secondary data (`01` p2 §3) |✓ 23 Nov  |
 
 ## Notes
 - R13 is untestable. Record that as a finding, not a gap in the analysis.
 - R5 valuation: `01` p3 §5.1 says all valuation uses the `sku_master` PTS/MRP, and in the data `claim_value_inr` = `qty_claimed` x `sku_master.pts_inr` on all 4,368 claims that have a value (24 Nov). The extract holds one price per SKU, so "PTS on the claim date" (`02` §5.7) cannot be tested separately. Record that as a limit.
-- R11 and blank `ordered_qty`: a blank is a later row of a split order line (`01` p3 §5.4), not missing data. Real order-line result: 74,133 full, 10,425 short, 2,628 not supplied of 87,186.
+- R11 and blank `ordered_qty`: a blank is a later row of a split order line (`01` p3 §5.4), not missing data. Real order-line result, free packs counted as supplied (corrected 24 Nov): 84,304 full, 254 partly supplied, 2,628 not supplied of 87,186. Comparing invoiced packs alone wrongly gave 10,425 short, because `ordered_qty` includes the free packs on scheme lines (invoiced + free = ordered on 10,171 of 10,288 scheme order lines).
