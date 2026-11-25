@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim check | Project Sankalp</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Claim check</h1>
+  <p class="sub">Project Sankalp pilot. Read-only: it recommends, Neha Bansal (Controller) decides. Nothing is posted to the ERP.</p>
+
+  <form id="form">
+    <label for="input">Claim number, email id, or pasted email text</label>
+    <textarea id="input" rows="3" maxlength="4000" placeholder="CLM-2608-01778   or   EML-014"></textarea>
+    <div class="row">
+      <button id="go" type="submit">Check claim</button>
+      <select id="emails" aria-label="Sample stockist emails"><option value="">Sample emails…</option></select>
+    </div>
+    <div class="chips" id="chips"></div>
+    <details>
+      <summary>Pasting an email? Add the sender details</summary>
+      <div class="row">
+        <input id="stockist" placeholder="Stockist code, e.g. STK0043" maxlength="12">
+        <input id="received" placeholder="Received date, YYYY-MM-DD" maxlength="10">
+      </div>
+    </details>
+  </form>
+
+  <div id="status" role="status" aria-live="polite"></div>
+  <div id="tabs"></div>
+  <section id="out" hidden>
+    <div id="badge"></div>
+    <p id="explain"></p>
+    <ul id="reasons"></ul>
+    <p id="amount"></p>
+    <ul id="notes" class="notes"></ul>
+    <h2>Checks</h2>
+    <div class="scroll"><table id="checks"><thead><tr><th>Rule</th><th>Result</th><th>What was found</th><th>Policy clause</th></tr></thead><tbody></tbody></table></div>
+    <h2>Evidence</h2>
+    <div class="scroll"><table id="evidence"><thead><tr><th>Fact</th><th>File</th><th>Row(s)</th><th>Values</th></tr></thead><tbody></tbody></table></div>
+    <p class="foot" id="foot"></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
