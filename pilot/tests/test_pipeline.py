@@ -133,3 +133,11 @@ def test_input_kinds():
 
 def test_number_guard():
     assert P.explanation_ok("Excess 12 packs", {"x": 12}) and not P.explanation_ok("Excess 13 packs", {"x": 12})
+
+
+def test_repeat_line_inside_one_email_is_a_probable_duplicate():
+    line = {"intent": "expiry_claim", "batch_no": "L2430266", "qty": 61, "unit": "strips", "invoice_ref": "INV/S02/2504/036190"}
+    out = P.run_sequential({"input": "EML-013"}, fake(read=json.dumps({"lines": [line, line]})))
+    assert len(out) == 2
+    assert not any(c["status"] == "flag" and c["rule"] == "R4" for c in out[0]["checks"])
+    assert any(c["status"] == "flag" and c["rule"] == "R4" for c in out[1]["checks"])

@@ -1,0 +1,87 @@
+{
+ "EML-022": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": "D2500228",
+    "qty": 241,
+    "unit": "strips",
+    "invoice_ref": "INV/N02/2506/039882"
+   }
+  ]
+ },
+ "EML-014": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": "M2400719",
+    "qty": 693,
+    "unit": "strips",
+    "invoice_ref": "INV/S01/2506/041964"
+   }
+  ]
+ },
+ "EML-008": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": "L2420268",
+    "qty": 43,
+    "unit": "boxes",
+    "invoice_ref": "INV/N02/2505/036911",
+    "strips_per_box": 10
+   }
+  ]
+ },
+ "EML-017": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": "K2430146",
+    "qty": 705,
+    "unit": "strips",
+    "invoice_ref": "INV/S01/2502/029631"
+   }
+  ]
+ },
+ "EML-013": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": "L2430266",
+    "qty": 61,
+    "unit": "strips",
+    "invoice_ref": "INV/S02/2504/036190"
+   },
+   {
+    "intent": "expiry_claim",
+    "batch_no": "L2430266",
+    "qty": 61,
+    "unit": "strips",
+    "invoice_ref": "INV/S02/2504/036190"
+   }
+  ]
+ },
+ "EML-006": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": null,
+    "qty": 168,
+    "unit": "strips",
+    "invoice_ref": null
+   }
+  ]
+ },
+ "EML-018": {
+  "lines": [
+   {
+    "intent": "expiry_claim",
+    "batch_no": null,
+    "qty": null,
+    "unit": "strips",
+    "invoice_ref": null
+   }
+  ]
+ }
+}

@@ -56,9 +56,13 @@ def r1_window(claim_type, claim_date, expiry_date, invoice_date=None) -> Check:
     else:
         return Check("R1", NEEDS_PERSON, f"Unknown claim type {claim_type!r}")
     detail = {"claim_type": claim_type, what: d, "allowed_from": lo, "allowed_to": hi}
+    ref = "expiry" if what == "days from expiry" else "invoice"
+    where = "on the " + ref + " date" if d == 0 else f"{abs(d)} day{'s' if abs(d) != 1 else ''} {'before' if d < 0 else 'after'} {ref}"
+    allowed = {C.NEAR_EXPIRY: f"{C.NEAR_EXPIRY_DAYS_BEFORE} days before expiry up to the expiry date",
+               C.EXPIRED: f"the expiry date up to {C.EXPIRED_DAYS_AFTER} days after expiry"}.get(claim_type, f"within {C.BREAKAGE_DAYS_AFTER_INVOICE} days of the invoice date")
     if lo <= d <= hi:
-        return Check("R1", PASS, f"{claim_type}: {d} {what}, inside {lo} to {hi}", detail=detail)
-    return Check("R1", FLAG, f"{claim_type}: {d} {what}, outside {lo} to {hi}", amount_basis="claim", detail=detail)
+        return Check("R1", PASS, f"{claim_type} claim filed {where}; allowed {allowed}", detail=detail)
+    return Check("R1", FLAG, f"{claim_type} claim filed {where}; allowed {allowed}", amount_basis="claim", detail=detail)
 
 
 def r2_invoice_reference(invoice_ref, remarks=None, invoice_found=None) -> Check:

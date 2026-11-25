@@ -114,7 +114,19 @@ def fetch(state: dict) -> dict:
     claim, why = build_email_claim(case, state.get("stockist_code"), state.get("received_date"))
     if claim is None:
         return {**base, **_terminal(why)}
-    return {**base, "claim": claim, "facts": K.gather(claim, state.get("source_evidence"))}
+    return {**base, "claim": claim, "facts": K.gather(claim, state.get("source_evidence"), same_email_lines(cases, i, claim))}
+
+
+def same_email_lines(cases: list, i: int, claim: dict) -> list:
+    """Earlier lines of this same email for the same batch, counted like earlier claims (the register cannot know about them)."""
+    out = []
+    for n, c in enumerate(cases[:i], start=1):
+        same = (c.get("intent") == "expiry_claim" and (c.get("batch_no") or "").strip().upper() == claim["batch_no"]
+                and isinstance(c.get("qty"), (int, float)))
+        if same:
+            q = float(c["qty"]) * (float(c.get("strips_per_box") or 1) if (c.get("unit") or "strips").lower() in ("boxes", "cartons") else 1)
+            out.append({"claim_no": f"line {n} of this email", "qty_claimed": int(q), "status": "New", "src_row": None})
+    return out
 
 
 def build_email_claim(case: dict, stockist_code, received_date):

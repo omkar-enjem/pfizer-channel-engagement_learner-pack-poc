@@ -1,0 +1,19 @@
+case_id,expected_route,got_route,expected_flags,got_flags,expected_amount,got_amount,result
+CLM-2608-01778,credit_for_review,credit_for_review,R6,R6,0.0,0.0,PASS
+CLM-2608-02777,hold,hold,R1 R2 R6,R1 R2 R6,13986.0,13986.0,PASS
+CLM-2608-02856,hold,hold,R1,R1,2101.2,2101.2,PASS
+CLM-2608-04515,hold,hold,R1 R4,R1 R4,12163.8,12163.8,PASS
+CLM-2608-02709,hold,hold,R2 R6,R2 R6,3978.8,3978.8,PASS
+CLM-2608-01758,hold,hold,R3 R6,R3 R6,1683.9,1683.9,PASS
+CLM-2608-01609,hold,hold,R2 R3 R6,R2 R3 R6,389629.8,389629.8,PASS
+CLM-2511-01801,needs_person,needs_person,R1 R12,R1 R12,0.0,0.0,PASS
+CLM-2609-02927,hold,hold,R4,R4,7210.2,7210.2,PASS
+CLM-2609-99999,needs_person,needs_person,,,0.0,0.0,PASS
+EML-022#1,credit_for_review,credit_for_review,,,0.0,0.0,PASS
+EML-014#1,hold,hold,R3,R3,12150.6,12150.6,PASS
+EML-008#1,credit_for_review,credit_for_review,,,0.0,0.0,PASS
+EML-017#1,hold,hold,R3,R3,41606.4,41606.4,PASS
+EML-013#1,credit_for_review,credit_for_review,,,0.0,0.0,PASS
+EML-013#2,hold,hold,R4,R4,2342.4,2342.4,PASS
+EML-006#1,needs_person,needs_person,,,0.0,0.0,PASS
+EML-018#1,needs_person,needs_person,,,0.0,0.0,PASS

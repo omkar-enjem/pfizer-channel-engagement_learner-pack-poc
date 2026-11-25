@@ -28,7 +28,7 @@ ALL_RULES = ("R1", "R2", "R3", "R4", "R5", "R6", "R12")
 EMAIL_RULES = ("R1", "R2", "R3", "R4", "R5")     # no claim number yet, so no R6 clock and no R12 format check
 
 
-def gather(claim: dict, source_evidence: dict | None = None) -> dict:
+def gather(claim: dict, source_evidence: dict | None = None, extra_earlier: list | None = None) -> dict:
     """Fetch every record the rules need for one claim. `claim` is a register row or a claim built from an email."""
     ref = claim["original_invoice_ref"]
     inv = T.invoice(ref) if ref else None
@@ -36,6 +36,7 @@ def gather(claim: dict, source_evidence: dict | None = None) -> dict:
     sup = T.supply(claim["stockist_code"], claim["batch_no"]) if bm else None
     in_register = claim.get("claim_no") is not None
     earlier = T.claims_before(claim) if in_register else T.claims_for_pair(claim["stockist_code"], claim["batch_no"])
+    earlier = earlier + (extra_earlier or [])
     claimed_before = sum(e["qty_claimed"] for e in earlier if e["status"] != "Rejected")
     value = claim["claim_value_inr"] if claim["claim_value_inr"] is not None else claim["claim_value_derived_inr"]
     return {"claim": claim, "ref": ref, "inv": inv, "bm": bm, "sk": sk, "sup": sup, "earlier": earlier,
@@ -84,7 +85,7 @@ def evidence_for(f: dict) -> list:
         ev.append(_ev("Batch", "batch_master.csv", [bm["src_row"]], {"batch_no": bm["batch_no"], "expiry_date": bm["expiry_date"]}))
     ev.append(_ev("Price to stockist (PTS)", "sku_master.csv", [sk["src_row"]], {"sku_code": sk["sku_code"], "pts_inr": f["pts"]}))
     if earlier:
-        ev.append(_ev("Earlier claims on this stockist and batch", "expiry_claims.csv", [e["src_row"] for e in earlier],
+        ev.append(_ev("Earlier claims on this stockist and batch", "expiry_claims.csv", [e["src_row"] for e in earlier if e["src_row"] is not None],
                       {"claims": ", ".join(f"{e['claim_no']} ({e['qty_claimed']}, {e['status']})" for e in earlier[:MAX_ROWS])}))
     return ev
 

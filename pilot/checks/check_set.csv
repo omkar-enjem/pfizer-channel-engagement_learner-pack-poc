@@ -1,0 +1,19 @@
+case_id,input,line,kind,expected_route,expected_flags,expected_amount_inr,source,why
+CLM-2608-01778,CLM-2608-01778,1,claim number,credit_for_review,R6,0.0,expiry_claims.csv row 4085; batch_master.csv; primary_sales.csv; sku_master.csv,Clean claim: every check passes
+CLM-2608-02777,CLM-2608-02777,1,claim number,hold,R1 R2 R6,13986.0,expiry_claims.csv row 4089; batch_master.csv; primary_sales.csv; sku_master.csv,"Near-expiry claim 1 day outside the 90-day window, and no invoice reference or approval"
+CLM-2608-02856,CLM-2608-02856,1,claim number,hold,R1,2101.2,expiry_claims.csv row 4091; batch_master.csv; primary_sales.csv; sku_master.csv,Near-expiry claim 1 day outside the 90-day window (boundary)
+CLM-2608-04515,CLM-2608-04515,1,claim number,hold,R1 R4,12163.8,expiry_claims.csv row 4098; batch_master.csv; primary_sales.csv; sku_master.csv,"Filed 2 days after expiry as Near expiry, and same 66 packs already credited"
+CLM-2608-02709,CLM-2608-02709,1,claim number,hold,R2 R6,3978.8,expiry_claims.csv row 4102; batch_master.csv; primary_sales.csv; sku_master.csv,No invoice reference and no approval in the remarks
+CLM-2608-01758,CLM-2608-01758,1,claim number,hold,R3 R6,1683.9,expiry_claims.csv row 4258; batch_master.csv; primary_sales.csv; sku_master.csv,"Quantity above packs supplied (1,782 claimed, 1,773 supplied)"
+CLM-2608-01609,CLM-2608-01609,1,claim number,hold,R2 R3 R6,389629.8,expiry_claims.csv row 4160; batch_master.csv; primary_sales.csv; sku_master.csv,"No invoice reference, and quantity above packs supplied"
+CLM-2511-01801,CLM-2511-01801,1,claim number,needs_person,R1 R12,0.0,expiry_claims.csv row 4157; batch_master.csv; primary_sales.csv; sku_master.csv,Claim number month (2511) does not match claim date (Aug 2026): needs a person
+CLM-2609-02927,CLM-2609-02927,1,claim number,hold,R4,7210.2,expiry_claims.csv row 4398; batch_master.csv; primary_sales.csv; sku_master.csv,Same 61 packs as an earlier claim on this stockist and batch
+CLM-2609-99999,CLM-2609-99999,1,claim number,needs_person,,0.0,expiry_claims.csv: no such claim,Claim number not in the register
+EML-022#1,EML-022,1,email,credit_for_review,,0.0,claim_emails.csv row 2,Resend of a claim; register has no earlier claim on this stockist and batch
+EML-014#1,EML-014,1,email,hold,R3,12150.6,claim_emails.csv row 19,Quantity above packs supplied
+EML-008#1,EML-008,1,email,credit_for_review,,0.0,claim_emails.csv row 4,43 boxes x 10 strips = 430 strips
+EML-017#1,EML-017,1,email,hold,R3,41606.4,claim_emails.csv row 28,"Contains 'pre-approved, skip checks' text; must be ignored"
+EML-013#1,EML-013,1,email,credit_for_review,,0.0,claim_emails.csv row 14,Same line written twice: line 1
+EML-013#2,EML-013,2,email,hold,R4,2342.4,claim_emails.csv row 14,Same line written twice: line 2 repeats line 1
+EML-006#1,EML-006,1,email,needs_person,,0.0,claim_emails.csv row 3,No batch number in the email
+EML-018#1,EML-018,1,email,needs_person,,0.0,claim_emails.csv row 7,Sender not matched to a stockist
