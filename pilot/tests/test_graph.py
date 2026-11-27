@@ -28,3 +28,9 @@ def test_graph_matches_plain_loop(text):
 def test_all_register_claims_run_seven_checks_in_the_graph():
     r = G.run_all("CLM-2608-02345", model_call=model)[0]
     assert [c["rule"] for c in r["checks"]] == ["R1", "R2", "R3", "R4", "R5", "R6", "R12"]
+
+
+def test_graph_draws_every_node():
+    text = G.draw()
+    for node in ["read_email", "fetch", "route", "explain"] + [f"check_{r}" for r in ("R1", "R2", "R3", "R4", "R5", "R6", "R12")]:
+        assert node in text

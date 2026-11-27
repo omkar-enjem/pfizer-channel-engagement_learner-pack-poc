@@ -3,6 +3,9 @@
   input -> read_email (model; skipped for a claim number) -> fetch -> R1 R2 R3 R4 R5 R6 R12 (in parallel)
         -> route -> explain (model) -> answer
 
+To see the compiled graph as a flow diagram (no key needed, no model is called), run from the pilot folder:
+  python -m agent.graph          prints the Mermaid text and writes docs/graph.mmd; paste it into https://mermaid.live
+
 All decisions are made by Python (pipeline.py, rules.py). The graph only gives the order and the parallel branch.
 """
 from __future__ import annotations
@@ -97,3 +100,17 @@ def run_all(text: str, stockist_code: str | None = None, received_date: str | No
         nxt["calls"] = 0       # the one read of the email is shared; each line gets its own explain call
         out.append(P.result(graph.invoke(nxt)))
     return out
+
+
+def draw(path: str | None = None) -> str:
+    """The compiled graph as Mermaid text, straight from LangGraph. Optionally written to a file."""
+    text = build(model_call=lambda system, user: "").get_graph().draw_mermaid()
+    if path:
+        from pathlib import Path
+        Path(path).parent.mkdir(parents=True, exist_ok=True)
+        Path(path).write_text(text, encoding="utf-8")
+    return text
+
+
+if __name__ == "__main__":
+    print(draw("docs/graph.mmd"))

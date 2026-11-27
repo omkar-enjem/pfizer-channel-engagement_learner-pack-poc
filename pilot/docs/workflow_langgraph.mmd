@@ -1,0 +1,43 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	read_email(read_email)
+	fetch(fetch)
+	check_R1(check_R1)
+	check_R2(check_R2)
+	check_R3(check_R3)
+	check_R4(check_R4)
+	check_R5(check_R5)
+	check_R6(check_R6)
+	check_R12(check_R12)
+	route(route)
+	explain(explain)
+	__end__([<p>__end__</p>]):::last
+	__start__ -. &nbsp;claim number or next email line&nbsp; .-> fetch;
+	__start__ -. &nbsp;email text or id&nbsp; .-> read_email;
+	read_email -. &nbsp;fields read&nbsp; .-> fetch;
+	read_email -. &nbsp;unreadable, no batch, unknown batch or no sender&nbsp; .-> route;
+	fetch -. &nbsp;claim not in file&nbsp; .-> route;
+	fetch -.-> check_R1;
+	fetch -.-> check_R2;
+	fetch -.-> check_R3;
+	fetch -.-> check_R4;
+	fetch -.-> check_R5;
+	fetch -.-> check_R6;
+	fetch -.-> check_R12;
+	check_R1 --> route;
+	check_R2 --> route;
+	check_R3 --> route;
+	check_R4 --> route;
+	check_R5 --> route;
+	check_R6 --> route;
+	check_R12 --> route;
+	route --> explain;
+	explain --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

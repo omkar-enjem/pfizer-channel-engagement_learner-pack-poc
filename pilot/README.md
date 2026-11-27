@@ -4,8 +4,12 @@ Read-only pilot for the Controller (Neha Bansal). Enter a claim number (for exam
 (`EML-014`) or paste an email. It returns **credit for review**, **hold** or **needs a person**, the reasons, the amount at issue,
 the result of each check with its policy clause, and the evidence with file and row. It never writes to the ERP.
 
-**Live:** https://pfizer-channel-engagement-learner-p.vercel.app  (Vercel Deployment Protection is on; sign in to Vercel first, or ask for a bypass link.)
+**Live:** https://pfizer-channel-engagement-learner-p.vercel.app
 Health check: `/api/health`.
+
+Tested on a device that had not been used for this project: 25 Nov 2026, a phone on mobile data. The page opened with no sign-in and
+`CLM-2608-04515` returned **hold** (claim filed after expiry; probable duplicate). Vercel Deployment Protection stays on for preview URLs;
+the production domain is public.
 
 ## How it works
 
@@ -13,6 +17,9 @@ Health check: `/api/health`.
 input -> read_email (model) -> fetch -> R1 R2 R3 R4 R5 R6 R12 (code, parallel) -> route (code) -> explain (model) -> answer
 ```
 Code decides; the model only reads an email into fields and words the explanation from verified facts. See `AGENTS.md` and the architecture note.
+
+To see the compiled LangGraph as a flow diagram, run `python -m agent.graph` from this folder. It prints Mermaid text (also saved to
+`docs/graph.mmd`); paste it into https://mermaid.live. No key needed.
 
 | Rule | What it checks | Source |
 |---|---|---|
@@ -36,7 +43,7 @@ agent/llm.py           the model provider (OpenRouter), prompts.py the two promp
 public/                one-screen UI (plain HTML, CSS, JS)
 data/                  the seven clean CSVs (read-only)
 checks/                18-record check set, independent derivation, runner
-tests/                 108 tests
+tests/                 110 tests
 ```
 
 ## Run it
@@ -44,7 +51,7 @@ tests/                 108 tests
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
 copy .env.example .env          # add OPENROUTER_API_KEY; MODEL defaults to openai/gpt-4o-mini
-python -m pytest -q             # 108 passed
+python -m pytest -q             # 110 passed
 uvicorn app:app --reload
 ```
 Without a key, claim numbers still get all checks with a template explanation; emails go to "needs a person".
@@ -55,6 +62,10 @@ Without a key, claim numbers still get all checks with a template explanation; e
   answer from the source rows without using `agent/rules.py`; the Source column names the file and row to open. Results:
   `python checks/run_checks.py` gives **18 of 18** with a fixed reading of the emails, and `--live` gives **18 of 18** with the real model
   reading the emails (run 25 Nov 2026, one run).
+- **Batch run:** `python checks/batch_12m.py` puts the 2,294 non-rejected claims of 1 Oct 2025 to 30 Sep 2026 through the rules (no model, no
+  network) and writes `checks/batch_12m_results.csv`: 1,589 credit for review, 626 hold, 79 needs a person; 336 claims break R1, R3 or R4
+  (value 0.905 crore, 265 already credited). Claim value is quantity x PTS where none is recorded. Discovery's 5.44 crore uses the credit
+  note value for credited claims, so it differs from this run's 5.47 crore by basis, not by claims.
 - **Nothing invented:** a number in the model's explanation that is not in the evidence is dropped and a fixed template is used.
 
 ## Known limits

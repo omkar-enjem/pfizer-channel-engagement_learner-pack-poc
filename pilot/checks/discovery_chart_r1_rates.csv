@@ -1,0 +1,5 @@
+claim_type,tested,flagged,not_testable,flag_rate
+Breakage in transit,59,49,14,0.831
+Short supply,67,55,7,0.821
+Near expiry,1222,135,0,0.11
+Expired,925,41,0,0.044
